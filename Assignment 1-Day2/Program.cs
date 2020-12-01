@@ -93,7 +93,7 @@ namespace Assignment1
                     deptNo = value;
                 }
                 else
-                    Console.WriteLine("Dept No must be grater than 0");
+                    Console.WriteLine("Dept No must be greater than 0");
             }
             get
             {
