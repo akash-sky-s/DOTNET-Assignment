@@ -138,10 +138,34 @@ namespace Assignment4Q2
     {
         static void Main2(string[] args)
         {
-            Console.Write("Enter the number of batches");
+            Console.Write("Enter the number of batches: " );
             int n = Convert.ToInt32(Console.ReadLine());
+            int[][] arr = new int[n][];
 
-            int nos = Convert.ToInt32(Console.ReadLine());
+            for(int i=0;i<arr.Length;i++)
+            {
+                Console.Write("Enter the number of students of batch {0}: ",i);
+                int nos = Convert.ToInt32(Console.ReadLine());
+                int[] marks = new int[nos];
+
+                Console.Write("Enter the marks of students of batch {0}: ", i);
+                for(int j=0;j<nos;j++)
+                {
+                    marks[j] = Convert.ToInt32(Console.ReadLine());
+                }
+                arr[i] = marks;
+            }
+            Console.WriteLine();
+            for(int i=0;i<arr.Length;i++)
+            {
+                for(int j=0;j<arr[i].Length;j++)
+                {
+                    Console.Write("Marks of student of batch {0} : ",i);
+                    Console.WriteLine(arr[i][j]);
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
         }
     }
 }
@@ -150,7 +174,7 @@ namespace Assignment4Q3
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main3(string[] args)
         {
             Console.WriteLine("Enter the Details of Students :");
             Student[] s = new Student[5];
